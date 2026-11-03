@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard — STUDIO MERZA</title>
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================= -->
+    <!-- ÉCRAN DE CONNEXION -->
+    <!-- ================================= -->
+
+    <section
+        class="login-screen"
+        id="login-screen"
+    >
+
+        <div class="login-box">
+
+            <p class="login-label">
+                STUDIO MERZA
+            </p>
+
+            <h1>
+                Espace<br>
+                réalisateur.
+            </h1>
+
+            <p class="login-description">
+                Cet espace est réservé
+                à l'équipe STUDIO MERZA.
+            </p>
+
+
+            <form id="login-form">
+
+                <label for="admin-password">
+                    MOT DE PASSE
+                </label>
+
+                <input
+                    type="password"
+                    id="admin-password"
+                    placeholder="••••••••••"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <p
+                    class="login-error"
+                    id="login-error"
+                >
+                    Mot de passe incorrect.
+                </p>
+
+                <button type="submit">
+                    Accéder au dashboard
+                    <span>→</span>
+                </button>
+
+            </form>
+
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+                ← Retour au site
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- DASHBOARD -->
+    <!-- ================================= -->
+
+    <section
+        class="dashboard"
+        id="dashboard"
+    >
+
+
+        <!-- ================================= -->
+        <!-- NAVIGATION -->
+        <!-- ================================= -->
+
+        <header class="dashboard-navbar">
+
+            <a
+                href="index.html"
+                class="dashboard-logo"
+            >
+                STUDIO
+                <span>MERZA</span>
+            </a>
+
+
+            <div class="dashboard-nav-right">
+
+                <span class="admin-status">
+                    <span></span>
+                    ESPACE RÉALISATEUR
+                </span>
+
+                <button
+                    id="logout-button"
+                    class="logout-button"
+                >
+                    Déconnexion
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================================= -->
+        <!-- CONTENU -->
+        <!-- ================================= -->
+
+        <main class="dashboard-content">
+
+
+            <!-- TITRE -->
+
+            <section class="dashboard-heading">
+
+                <div>
+
+                    <p class="section-label">
+                        TABLEAU DE BORD
+                    </p>
+
+                    <h1>
+                        Bonjour,<br>
+                        STUDIO MERZA.
+                    </h1>
+
+                </div>
+
+
+                <button
+                    class="add-film-button"
+                    id="add-film-button"
+                >
+                    <span>+</span>
+                    Ajouter un film
+                </button>
+
+            </section>
+
+
+
+            <!-- ================================= -->
+            <!-- STATISTIQUES -->
+            <!-- ================================= -->
+
+            <section class="stats-grid">
+
+
+                <article class="stat-card">
+
+                    <p>
+                        VUES TOTALES
+                    </p>
+
+                    <strong id="total-views">
+                        0
+                    </strong>
+
+                    <span>
+                        sur tous les films
+                    </span>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <p>
+                        LIKES
+                    </p>
+
+                    <strong id="total-likes">
+                        0
+                    </strong>
+
+                    <span>
+                        appréciations
+                    </span>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <p>
+                        COMMENTAIRES
+                    </p>
+
+                    <strong id="total-comments">
+                        0
+                    </strong>
+
+                    <span>
+                        de la communauté
+                    </span>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <p>
+                        FILMS
+                    </p>
+
+                    <strong id="total-films">
+                        0
+                    </strong>
+
+                    <span>
+                        courts-métrages
+                    </span>
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- ================================= -->
+            <!-- FILMS -->
+            <!-- ================================= -->
+
+            <section class="dashboard-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="section-label">
+                            BIBLIOTHÈQUE
+                        </p>
+
+                        <h2>
+                            Mes films
+                        </h2>
+
+                    </div>
+
+                    <span
+                        class="film-count"
+                        id="film-count"
+                    >
+                        0 films
+                    </span>
+
+                </div>
+
+
+
+                <div
+                    class="dashboard-films"
+                    id="dashboard-films"
+                ></div>
+
+
+                <div
+                    class="dashboard-empty"
+                    id="dashboard-empty"
+                >
+
+                    <span>
+                        +
+                    </span>
+
+                    <p>
+                        Aucun film dans votre bibliothèque.
+                    </p>
+
+                    <small>
+                        Ajoutez votre premier court-métrage
+                        pour le faire apparaître ici.
+                    </small>
+
+                    <button
+                        id="empty-add-film"
+                    >
+                        Ajouter un film
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ================================= -->
+            <!-- COMMENTAIRES RÉCENTS -->
+            <!-- ================================= -->
+
+            <section class="dashboard-section">
+
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <p class="section-label">
+                            COMMUNAUTÉ
+                        </p>
+
+                        <h2>
+                            Commentaires récents
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="recent-comments"
+                    id="recent-comments"
+                >
+
+                    <div class="no-comments">
+
+                        <span>
+                            💬
+                        </span>
+
+                        <p>
+                            Aucun commentaire pour le moment.
+                        </p>
+
+                        <small>
+                            Les commentaires des visiteurs
+                            apparaîtront ici.
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+        </main>
+
+
+
+        <!-- ================================= -->
+        <!-- FOOTER -->
+        <!-- ================================= -->
+
+        <footer class="dashboard-footer">
+
+            <span>
+                STUDIO MERZA
+            </span>
+
+            <span>
+                DASHBOARD RÉALISATEUR
+            </span>
+
+        </footer>
+
+
+    </section>
+
+
+
+    <!-- ================================= -->
+    <!-- MODALE AJOUT FILM -->
+    <!-- ================================= -->
+
+    <div
+        class="film-modal"
+        id="film-modal"
+    >
+
+        <div
+            class="film-modal-overlay"
+            id="film-modal-overlay"
+        ></div>
+
+
+        <div class="film-modal-box">
+
+
+            <div class="film-modal-header">
+
+                <div>
+
+                    <p>
+                        STUDIO MERZA
+                    </p>
+
+                    <h2>
+                        Ajouter un film
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="close-film-modal"
+                    class="close-film-modal"
+                    aria-label="Fermer"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+
+            <form id="add-film-form">
+
+
+                <!-- TITRE -->
+
+                <div class="form-field">
+
+                    <label for="film-title">
+                        TITRE DU FILM
+                    </label>
+
+                    <input
+                        type="text"
+                        id="film-title"
+                        placeholder="Ex : Un jour ailleurs"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- ANNÉE + RÉALISATEUR -->
+
+                <div class="form-row">
+
+                    <div class="form-field">
+
+                        <label for="film-year">
+                            ANNÉE DE SORTIE
+                        </label>
+
+                        <input
+                            type="number"
+                            id="film-year"
+                            min="1900"
+                            max="2100"
+                            placeholder="2026"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="film-director">
+                            RÉALISATEUR
+                        </label>
+
+                        <input
+                            type="text"
+                            id="film-director"
+                            placeholder="Timothée Merza"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="form-field">
+
+                    <label for="film-description">
+                        DESCRIPTION
+                    </label>
+
+                    <textarea
+                        id="film-description"
+                        placeholder="Présente ton film..."
+                        maxlength="1000"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- MINIATURE -->
+
+                <div class="form-field">
+
+                    <label for="film-thumbnail">
+                        MINIATURE / AFFICHE
+                    </label>
+
+                    <input
+                        type="file"
+                        id="film-thumbnail"
+                        accept="image/*"
+                        required
+                    >
+
+                    <small>
+                        JPG, PNG ou WEBP
+                    </small>
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- LIEN YOUTUBE DU FILM -->
+                <!-- ================================= -->
+
+                <div class="form-field">
+
+                    <label for="film-video-url">
+                        LIEN YOUTUBE DU FILM
+                    </label>
+
+                    <input
+                        type="url"
+                        id="film-video-url"
+                        placeholder="https://www.youtube.com/watch?v=..."
+                        required
+                    >
+
+                    <small>
+                        La vidéo doit être publique ou non répertoriée.
+                    </small>
+
+                </div>
+
+
+
+                <!-- ================================= -->
+                <!-- LIEN YOUTUBE BANDE-ANNONCE -->
+                <!-- ================================= -->
+
+                <div class="form-field">
+
+                    <label for="film-trailer-url">
+                        LIEN YOUTUBE DE LA BANDE-ANNONCE
+                    </label>
+
+                    <input
+                        type="url"
+                        id="film-trailer-url"
+                        placeholder="https://www.youtube.com/watch?v=..."
+                    >
+
+                    <small>
+                        Optionnel.
+                    </small>
+
+                </div>
+
+
+
+                <!-- ACTIONS -->
+
+                <div class="film-modal-actions">
+
+                    <button
+                        type="button"
+                        id="cancel-film"
+                        class="cancel-film"
+                    >
+                        Annuler
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="save-film"
+                    >
+                        Ajouter le film
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

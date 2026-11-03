@@ -1,0 +1,1001 @@
+/* ================================================= */
+/* RESET */
+/* ================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+textarea {
+    font-family: inherit;
+}
+
+
+/* ================================================= */
+/* NAVBAR */
+/* ================================================= */
+
+.film-navbar {
+    position: relative;
+
+    width: 100%;
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5vw;
+
+    background: rgba(5, 5, 5, .96);
+
+    border-bottom: 1px solid rgba(255,255,255,.07);
+
+    z-index: 10;
+}
+
+
+/* ================================================= */
+/* LOGO */
+/* ================================================= */
+
+.film-logo {
+    display: flex;
+    align-items: baseline;
+
+    gap: 6px;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #8d6420,
+            #d8b45a,
+            #fff0a8,
+            #b98b32,
+            #f1d77a
+        );
+
+    background-size: 250% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: goldShine 5s linear infinite;
+}
+
+.film-logo span {
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+/* ================================================= */
+/* TITRE NAVBAR */
+/* ================================================= */
+
+.film-nav-title {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+
+/* ================================================= */
+/* RETOUR */
+/* ================================================= */
+
+.film-back {
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+}
+
+.film-back:hover {
+    color: #d8b45a;
+    transform: translateX(-4px);
+}
+
+
+/* ================================================= */
+/* PAGE */
+/* ================================================= */
+
+.film-page {
+    width: min(1600px, 94vw);
+
+    margin: 0 auto;
+
+    padding-bottom: 120px;
+}
+
+
+/* ================================================= */
+/* VIDÉO PRINCIPALE */
+/* ================================================= */
+
+.film-player-section {
+    width: 100%;
+
+    padding-top: 35px;
+}
+
+
+.film-player {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #21180c,
+            #080808 65%
+        );
+
+    border: 1px solid rgba(216,180,90,.18);
+
+    box-shadow:
+        0 35px 100px rgba(0,0,0,.65);
+}
+
+
+/* ================================================= */
+/* YOUTUBE */
+/* ================================================= */
+
+.film-player iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border: none;
+}
+
+
+/* ================================================= */
+/* PLACEHOLDER */
+/* ================================================= */
+
+.video-placeholder {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(216,180,90,.12),
+            transparent 35%
+        );
+}
+
+.placeholder-play {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(216,180,90,.5);
+
+    border-radius: 50%;
+
+    color: #d8b45a;
+
+    font-size: 20px;
+}
+
+.video-placeholder p {
+    color: #d8b45a;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+}
+
+.video-placeholder span {
+    margin-top: 10px;
+
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================================================= */
+/* INFORMATIONS */
+/* ================================================= */
+
+.film-main-info {
+    padding: 55px 10px 75px;
+}
+
+
+/* ================================================= */
+/* LABEL */
+/* ================================================= */
+
+.film-label {
+    color: #a8843c;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+/* ================================================= */
+/* TITRE */
+/* ================================================= */
+
+.film-main-info h1 {
+    max-width: 1100px;
+
+    margin-top: 15px;
+
+    font-size: clamp(48px, 6vw, 88px);
+
+    line-height: .95;
+
+    letter-spacing: -5px;
+
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            120deg,
+            #8d6420,
+            #d8b45a,
+            #fff0a8,
+            #b98b32,
+            #f1d77a
+        );
+
+    background-size: 250% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation: goldShine 5s linear infinite;
+}
+
+
+/* ================================================= */
+/* DESCRIPTION */
+/* ================================================= */
+
+.description {
+    max-width: 850px;
+
+    margin-top: 25px;
+
+    color: #999;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* ================================================= */
+/* RÉALISATEUR */
+/* ================================================= */
+
+.director {
+    margin-top: 25px;
+
+    color: #4f4f4f;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+.director strong {
+    margin-left: 7px;
+
+    color: #aaa;
+
+    font-weight: 500;
+}
+
+
+/* ================================================= */
+/* STATS */
+/* ================================================= */
+
+.film-stats {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 38px;
+}
+
+
+/* ================================================= */
+/* VUES + LIKES */
+/* ================================================= */
+
+.views,
+.likes {
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #202020;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111,
+            #080808
+        );
+
+    transition:
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.views {
+    min-width: 155px;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 0 20px;
+}
+
+.views:hover,
+.likes:hover {
+    border-color: rgba(216,180,90,.4);
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================================= */
+/* NOMBRE VUES */
+/* ================================================= */
+
+.stat-number {
+    color: #d8b45a;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+/* ================================================= */
+/* LIKES */
+/* ================================================= */
+
+.likes {
+    min-width: 165px;
+
+    padding: 0;
+}
+
+#like-button {
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0 20px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777;
+
+    cursor: pointer;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+}
+
+#like-button:hover {
+    color: #d8b45a;
+
+    transform: scale(1.04);
+}
+
+#like-button.liked {
+    color: #d8b45a;
+}
+
+#like-icon {
+    font-size: 21px;
+
+    line-height: 1;
+}
+
+#like-count {
+    color: #aaa;
+
+    font-size: 13px;
+}
+
+.likes > span:last-child {
+    margin-right: 18px;
+
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ================================================= */
+/* BANDE-ANNONCE */
+/* ================================================= */
+
+.trailer-section {
+    padding: 85px 10px 100px;
+
+    border-top: 1px solid #171717;
+}
+
+
+.trailer-section .section-heading {
+    margin-bottom: 30px;
+}
+
+.trailer-section .section-heading p {
+    color: #a8843c;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+.trailer-section .section-heading h2 {
+    margin-top: 10px;
+
+    font-size: clamp(38px, 5vw, 64px);
+
+    letter-spacing: -4px;
+}
+
+
+/* ================================================= */
+/* TRAILER */
+/* ================================================= */
+
+.trailer-player {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: #080808;
+
+    border: 1px solid #1b1b1b;
+
+    box-shadow:
+        0 30px 90px rgba(0,0,0,.5);
+}
+
+.trailer-player iframe {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+
+/* ================================================= */
+/* COMMENTAIRES */
+/* ================================================= */
+
+.comments-section {
+    padding: 90px 10px 0;
+
+    border-top: 1px solid #171717;
+}
+
+
+/* ================================================= */
+/* HEADER COMMENTAIRES */
+/* ================================================= */
+
+.comments-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+}
+
+.comments-heading p {
+    color: #a8843c;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+.comments-heading h2 {
+    margin-top: 10px;
+
+    font-size: clamp(38px, 5vw, 64px);
+
+    letter-spacing: -4px;
+}
+
+.comments-heading > span {
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+#comment-count {
+    color: #d8b45a;
+}
+
+
+/* ================================================= */
+/* UTILISATEUR */
+/* ================================================= */
+
+.comment-user {
+    margin-bottom: 14px;
+
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+.comment-user strong {
+    color: #aaa;
+
+    font-weight: 500;
+}
+
+
+/* ================================================= */
+/* FORMULAIRE */
+/* ================================================= */
+
+.comment-form {
+    display: grid;
+
+    grid-template-columns: 1fr 160px;
+
+    gap: 12px;
+
+    margin-bottom: 45px;
+}
+
+.comment-form textarea {
+    width: 100%;
+
+    min-height: 120px;
+
+    padding: 18px;
+
+    resize: vertical;
+
+    border: 1px solid #202020;
+
+    outline: none;
+
+    background: #090909;
+
+    color: #ddd;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    transition: border-color .25s ease;
+}
+
+.comment-form textarea::placeholder {
+    color: #444;
+}
+
+.comment-form textarea:focus {
+    border-color: rgba(216,180,90,.45);
+}
+
+
+/* ================================================= */
+/* BOUTON COMMENTAIRE */
+/* ================================================= */
+
+.comment-form button {
+    min-height: 120px;
+
+    border: 1px solid rgba(216,180,90,.35);
+
+    background:
+        linear-gradient(
+            145deg,
+            #1b150b,
+            #0b0b0b
+        );
+
+    color: #d8b45a;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.comment-form button:hover {
+    background: #d8b45a;
+
+    color: #050505;
+
+    transform: translateY(-2px);
+}
+
+.comment-form button span {
+    margin-left: 8px;
+
+    font-size: 15px;
+}
+
+
+/* ================================================= */
+/* LISTE */
+/* ================================================= */
+
+.comments-list {
+    border-top: 1px solid #171717;
+}
+
+
+/* ================================================= */
+/* COMMENTAIRE */
+/* ================================================= */
+
+.comment {
+    padding: 28px 5px;
+
+    border-bottom: 1px solid #151515;
+}
+
+.comment-author {
+    color: #d8b45a;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.comment p {
+    max-width: 850px;
+
+    margin-top: 10px;
+
+    color: #888;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* ================================================= */
+/* VIDE */
+/* ================================================= */
+
+.empty-comments {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    border: 1px solid #151515;
+
+    background: rgba(255,255,255,.01);
+}
+
+.empty-comments span {
+    color: #555;
+
+    font-size: 11px;
+}
+
+.empty-comments p {
+    margin-top: 10px;
+
+    color: #333;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================================================= */
+/* FOOTER */
+/* ================================================= */
+
+.film-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 45px 5vw;
+
+    border-top: 1px solid #171717;
+
+    color: #3f3f3f;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+.film-footer span:first-child {
+    color: #8f6c2e;
+}
+
+
+/* ================================================= */
+/* ANIMATION OR */
+/* ================================================= */
+
+@keyframes goldShine {
+
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 250% center;
+    }
+}
+
+
+/* ================================================= */
+/* TABLETTE */
+/* ================================================= */
+
+@media (max-width: 900px) {
+
+    .film-page {
+        width: 94vw;
+    }
+
+    .film-player {
+        aspect-ratio: 16 / 9;
+    }
+
+    .film-main-info {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+}
+
+
+/* ================================================= */
+/* MOBILE */
+/* ================================================= */
+
+@media (max-width: 650px) {
+
+    .film-navbar {
+        height: 72px;
+
+        padding: 0 5vw;
+    }
+
+    .film-logo {
+        font-size: 14px;
+
+        letter-spacing: 3px;
+    }
+
+    .film-logo span {
+        font-size: 10px;
+    }
+
+    .film-nav-title {
+        display: none;
+    }
+
+    .film-back {
+        font-size: 8px;
+    }
+
+    .film-page {
+        width: 94vw;
+    }
+
+    .film-player-section {
+        padding-top: 20px;
+    }
+
+    .film-player {
+        aspect-ratio: 16 / 9;
+
+        min-height: 0;
+    }
+
+    .film-main-info {
+        padding: 38px 3px 55px;
+    }
+
+    .film-main-info h1 {
+        font-size: 46px;
+
+        letter-spacing: -3px;
+    }
+
+    .description {
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+    .film-stats {
+        width: 100%;
+
+        gap: 8px;
+    }
+
+    .views,
+    .likes {
+        min-width: 0;
+
+        flex: 1;
+    }
+
+    .trailer-section,
+    .comments-section {
+        padding-top: 65px;
+    }
+
+    .comments-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .comment-form {
+        grid-template-columns: 1fr;
+    }
+
+    .comment-form button {
+        min-height: 60px;
+    }
+
+    .film-footer {
+        padding: 35px 5vw;
+
+        font-size: 8px;
+    }
+
+}
+
+
+/* ================================================= */
+/* PETITS ÉCRANS */
+/* ================================================= */
+
+@media (max-width: 400px) {
+
+    .film-main-info h1 {
+        font-size: 38px;
+    }
+
+    .film-stats {
+        flex-direction: column;
+    }
+
+    .views,
+    .likes {
+        width: 100%;
+    }
+}

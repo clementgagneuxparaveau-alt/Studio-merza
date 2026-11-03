@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Film — STUDIO MERZA</title>
+
+    <link
+        rel="stylesheet"
+        href="film.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================= -->
+    <!-- NAVIGATION -->
+    <!-- ================================= -->
+
+    <header class="film-navbar">
+
+        <a
+            href="index.html"
+            class="film-logo"
+        >
+            STUDIO
+            <span>MERZA</span>
+        </a>
+
+
+        <div class="film-nav-title">
+            COURT-MÉTRAGE
+        </div>
+
+
+        <a
+            href="index.html"
+            class="film-back"
+        >
+            ← Retour
+        </a>
+
+    </header>
+
+
+
+    <!-- ================================= -->
+    <!-- CONTENU PRINCIPAL -->
+    <!-- ================================= -->
+
+    <main class="film-page">
+
+
+        <!-- ================================= -->
+        <!-- LECTEUR VIDÉO -->
+        <!-- ================================= -->
+
+        <section class="film-player-section">
+
+            <div
+                class="film-player"
+                id="film-player"
+            >
+
+                <!-- YouTube sera ajouté automatiquement par film.js -->
+
+                <div
+                    class="video-placeholder"
+                    id="video-placeholder"
+                >
+
+                    <div class="placeholder-play">
+                        ▶
+                    </div>
+
+                    <p>
+                        CHARGEMENT DU FILM
+                    </p>
+
+                    <span>
+                        STUDIO MERZA
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- INFORMATIONS DU FILM -->
+        <!-- ================================= -->
+
+        <section class="film-main-info">
+
+
+            <p class="film-label">
+                STUDIO MERZA
+            </p>
+
+
+            <h1>
+                Chargement...
+            </h1>
+
+
+            <p class="description">
+                Chargement de la description...
+            </p>
+
+
+            <p class="director">
+                RÉALISÉ PAR
+                <strong>
+                    STUDIO MERZA
+                </strong>
+            </p>
+
+
+
+            <!-- ================================= -->
+            <!-- STATISTIQUES -->
+            <!-- ================================= -->
+
+            <div class="film-stats">
+
+
+                <div class="views">
+
+                    <span class="stat-number">
+                        0
+                    </span>
+
+                    <span>
+                        VUES
+                    </span>
+
+                </div>
+
+
+                <div class="likes">
+
+                    <button
+                        type="button"
+                        id="like-button"
+                    >
+
+                        <span id="like-icon">
+                            ♡
+                        </span>
+
+                        <span id="like-count">
+                            0
+                        </span>
+
+                    </button>
+
+                    <span>
+                        LIKES
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- BANDE-ANNONCE -->
+        <!-- ================================= -->
+
+        <section
+            class="trailer-section"
+            id="trailer-section"
+        >
+
+            <div class="section-heading">
+
+                <p>
+                    STUDIO MERZA
+                </p>
+
+                <h2>
+                    Bande-annonce
+                </h2>
+
+            </div>
+
+
+            <div
+                class="trailer-player"
+                id="trailer-player"
+            >
+
+                <!-- YouTube sera ajouté automatiquement -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================================= -->
+        <!-- COMMENTAIRES -->
+        <!-- ================================= -->
+
+        <section class="comments-section">
+
+
+            <div class="comments-heading">
+
+                <div>
+
+                    <p>
+                        COMMUNAUTÉ
+                    </p>
+
+                    <h2>
+                        Commentaires
+                    </h2>
+
+                </div>
+
+
+                <span>
+                    <span id="comment-count">
+                        0
+                    </span>
+                    commentaires
+                </span>
+
+            </div>
+
+
+
+            <!-- ================================= -->
+            <!-- PSEUDO -->
+            <!-- ================================= -->
+
+            <div class="comment-user">
+
+                <span>
+                    Vous commentez en tant que
+                </span>
+
+                <strong id="comment-pseudo">
+                    Visiteur
+                </strong>
+
+            </div>
+
+
+
+            <!-- ================================= -->
+            <!-- FORMULAIRE -->
+            <!-- ================================= -->
+
+            <form
+                id="comment-form"
+                class="comment-form"
+            >
+
+                <textarea
+                    id="comment-text"
+                    placeholder="Écris ton commentaire..."
+                    maxlength="500"
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+
+                    Publier
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+            </form>
+
+
+
+            <!-- ================================= -->
+            <!-- LISTE COMMENTAIRES -->
+            <!-- ================================= -->
+
+            <div
+                class="comments-list"
+                id="comments-list"
+            >
+
+                <div class="empty-comments">
+
+                    <span>
+                        Aucun commentaire pour le moment.
+                    </span>
+
+                    <p>
+                        Sois le premier à donner ton avis.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================================= -->
+    <!-- FOOTER -->
+    <!-- ================================= -->
+
+    <footer class="film-footer">
+
+        <span>
+            STUDIO MERZA
+        </span>
+
+        <span>
+            © 2026
+        </span>
+
+    </footer>
+
+
+
+    <script src="film.js"></script>
+
+</body>
+
+</html>
